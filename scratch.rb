@@ -1,26 +1,21 @@
-puts "Please enter name: "
 
-name = $stdin.gets.chomp
+brothers = Hash.new
+brothers = {"1st" => "nenu", "2nd" => "tak", "3rdA"=>"mon", "3rdB"=>"ching"}
 
-#if name == "nenu"
-#	puts "Oh thats my name too!"
-#else
-#	puts "Hello #{name}!"
+=begin
+#using each method; also called each_pair
+brothers.each do |key,value|
+	puts "The hash key is #{key} and the value is #{value}"
 
-#end
+end
+
+=end
 
 
-puts "Do you want to show your name backward (y/n)?"
-
-ans = $stdin.gets.chomp
-
-if ans == "y"
-	puts name.reverse
-elsif ans == "n"
-	puts "OK we wont mess around with your name"
-else
-	puts "please enter either y or n"
+#also uses each method but only takes one argument.
+#note each_key and each_value
+brothers.each_key do |key|
+	puts "The value is #{key}"
 end
 
 
-	
